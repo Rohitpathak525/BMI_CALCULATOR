@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/t1_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="4dp"
+        android:background="#00fa9a"
+        android:gravity="center"
+        android:text="BMI CALCULATOR"
+        android:textSize="40sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WEIGHT:"
+        android:layout_below="@id/t1_text_view"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="30dp"
+        android:textColor="#b22222"
+        android:textSize="20sp"
+        android:id="@+id/t2_text_view"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kg"
+        android:layout_marginLeft="100dp"
+        android:layout_toRightOf="@id/t2_text_view"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/t1_text_view"
+        android:textSize="20sp"
+        android:background="#d2691e"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HEIGHT:"
+        android:layout_below="@id/t2_text_view"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="30dp"
+        android:textColor="#b22222"
+        android:textSize="20sp"
+        android:id="@+id/t3_text_view"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Feet"
+        android:paddingLeft="140dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/t3_text_view"
+
+        android:id="@+id/t4_text_view"
+
+
+        android:textSize="20sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inch"
+        android:paddingLeft="200dp"
+        android:layout_below="@id/t3_text_view"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="calculate"
+        android:background="#808080"
+        android:id="@+id/btn"
+
+        android:layout_below="@id/t4_text_view"
+        android:layout_marginTop="30dp"
+
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/t3_text_view"
+        android:layout_above="@id/t4_text_view"
+        android:layout_marginLeft="40dp"
+        android:id="@+id/feet"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/t3_text_view"
+        android:layout_above="@id/t4_text_view"
+        android:layout_marginLeft="100dp"
+        android:id="@+id/inch"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/t4_text_view"
+        android:layout_toRightOf="@id/t2_text_view"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/wt"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result:"
+        android:layout_below="@id/btn"
+        android:layout_centerInParent="true"
+        android:textSize="30sp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/res"
+        android:background="#1e90ff"/>
+    <TextView
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/res"
+        android:textSize="25sp"
+        android:layout_centerInParent="true"
+        android:textColor="#ff6347"
+        android:id="@+id/r0"/>
+    <TextView
+        android:text="FACTS:"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:layout_below="@id/r0"
+        android:id="@+id/r1"/>
+    <TextView
+        android:text="1) Less than 18.5:Underweight"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/r1"
+        android:textSize="20sp"
+        android:id="@+id/r2"
+        android:textColor="#0000cd"/>
+    <TextView
+        android:text="2)Between 18.5 to 24.9:Healthy"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/r2"
+        android:textSize="20sp"
+        android:id="@+id/r3"
+        android:textColor="#32cd32" />
+    <TextView
+        android:text="3)25.0 to 29.0: Overweight"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/r3"
+        android:textSize="20sp"
+        android:id="@+id/r4"
+        android:textColor="#ff69b4"/>
+    <TextView
+        android:text="4)30 to 34.9: Obese ClassI"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/r4"
+        android:textSize="20sp"
+        android:id="@+id/r5"
+        android:textColor="#ffa07a"/>
+
+    <TextView
+        android:text="5)35 to 39.9: Obese ClassII"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/r5"
+        android:textSize="20sp"
+        android:id="@+id/r6"
+        android:textColor="#ff6347"/>
+
+    <TextView
+        android:text="6)Greater than 40: Obese ClassIII"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/r6"
+        android:textSize="20sp"
+        android:textColor="#ff0000"/>
+
+</RelativeLayout>
