@@ -1,0 +1,22 @@
+image: gitpod/workspace-full-vnc
+
+tasks:
+    - init: |+
+        sudo apt-get update
+        sudo apt-get -y upgrade
+        
+        # Install Gnome
+        sudo apt-get install -y tasksel gnome-session gdm3
+        sudo tasksel install ubuntu-desktop
+
+        # Download specific Android Studio bundle (all packages).
+        curl 'https://uit.fun/repo/android-studio-ide-183.5522156-linux.zip' > /tmp/studio.zip
+        unzip -d ~ /tmp/studio.zip
+        rm /tmp/studio.zip
+
+        export ANDROID_HOME=${HOME}/Android/Sdk
+        export PATH="${ANDROID_HOME}/tools:${PATH}"
+        export PATH="${ANDROID_HOME}/emulator:${PATH}"
+        export PATH="${ANDROID_HOME}/platform-tools:${PATH}"
+        
+        ~/android-studio/bin/studio.sh
